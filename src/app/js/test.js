@@ -1,11 +1,12 @@
 class Test {
   constructor() {
-    this.name = 'Testie'
+    this.name = 'Testie';
   }
 
   sayHello = () => {
-    console.log(this.name)
-  }
+    console.log(this.name);
+    console.log('hello');
+  };
 }
 
 const test2 = new Test();
