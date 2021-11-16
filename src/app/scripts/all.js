@@ -1,0 +1,2 @@
+"use strict";function _classCallCheck(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}var Test=function e(){var t=this;_classCallCheck(this,e),_defineProperty(this,"sayHello",function(){console.log(t.name)}),this.name="Testie"},test2=new Test;test2.sayHello();
+//# sourceMappingURL=all.js.map
