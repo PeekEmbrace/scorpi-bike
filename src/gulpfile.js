@@ -45,8 +45,3 @@ gulp.task('watch', ['browserSync', 'sass', 'js'], function (){
   gulp.watch('app/*.html', browserSync.reload);
   gulp.watch('app/js/**/*.js', ['js'], browserSync.reload);
 });
-
-gulp.task('fonts', function () {
-  return gulp.src('app/fonts/**/*')
-    .pipe(gulp.dest('dist/fonts'));
-});
