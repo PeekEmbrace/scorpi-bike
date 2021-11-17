@@ -1,2 +1,2 @@
-body{background:#000}.hello,h1{color:red}.hello{font-size:13px}
+:root{--primary:#2b2a28;--secondary:#feed01;--accent:#fff7e6}body{background:#000}h1{color:red}@media (min-width:480px){h1{color:blue}}.hello{color:red;font-size:13px}p{color:var(--primary)}
 /*# sourceMappingURL=styles.css.map */

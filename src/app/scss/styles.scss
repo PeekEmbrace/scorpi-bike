@@ -1,9 +1,16 @@
+@import 'utils/variables';
+@import 'utils/mixins';
+
 body {
   background: black;
 }
 
 h1 {
   color: red;
+
+  @include breakpoint('xs') {
+    color: blue;
+  }
 }
 
 .hello {
