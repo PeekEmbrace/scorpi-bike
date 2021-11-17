@@ -16,6 +16,12 @@ $breakpoints: (
   ),
 ) !default;
 
+$spacings: (
+  'padding-bottom',
+  'padding-top',
+  'padding-left',
+  'padding-right'
+) !default;
 :root {
   --primary: #2b2a28;
   --secondary: #feed01;

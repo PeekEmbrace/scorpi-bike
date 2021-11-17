@@ -1,2 +1,2 @@
-:root{--primary:#2b2a28;--secondary:#feed01;--accent:#fff7e6}body{background:#000}h1{color:red}@media (min-width:480px){h1{color:blue}}.hello{color:red;font-size:13px}p{color:var(--primary)}
+:root{--primary:#2b2a28;--secondary:#feed01;--accent:#fff7e6}body{background:#000}h1{color:red;margin:36px 4px 4px 9px}@media (min-width:480px){h1{color:blue}}.hello{color:red;font-size:13px}
 /*# sourceMappingURL=styles.css.map */

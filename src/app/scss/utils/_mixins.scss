@@ -1,3 +1,5 @@
+@use 'sass:math';
+@use 'sass:string';
 @import 'variables';
 
 @mixin breakpoint($breakpoint) {
@@ -13,5 +15,29 @@
   @else {
     @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
         + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+@function getSize($number) {
+  @if $number {
+    @return (
+      string.unquote(
+        string.insert(string.quote(#{math.pow($number, 2)}), 'px', -1)
+      )
+    );
+  } @else {
+    @return null;
+  }
+}
+
+@mixin spacing($property, $top: 2, $right: null, $bottom: null, $left: null) {
+  @if ($top and $right and $bottom and $left) {
+    #{$property}: getSize($top) getSize($right) getSize($bottom) getSize($left);
+  } @else if ($top and $right and $bottom) {
+    #{$property}: getSize($top) getSize($right) getSize($bottom);
+  } @else if ($top and $right) {
+    #{$property}: getSize($top) getSize($right);
+  } @else {
+    #{$property}: getSize($top);
   }
 }
