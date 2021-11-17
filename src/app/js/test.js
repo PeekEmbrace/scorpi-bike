@@ -1,7 +1,8 @@
 class Test {
   constructor() {
-    this.name = 'Testie';
+    this.name = 'Te sti gulpe';
   }
+
 
   sayHello = () => {
     console.log(this.name);
