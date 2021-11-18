@@ -1,0 +1,29 @@
+$breakpoints: (
+  'xs': (
+    min-width: 480px,
+  ),
+  's': (
+    min-width: 667px,
+  ),
+  'm': (
+    min-width: 1024px,
+  ),
+  'l': (
+    min-width: 1280px,
+  ),
+  'xl': (
+    min-width: 1680px,
+  ),
+) !default;
+
+$spacings: (
+  'padding-bottom',
+  'padding-top',
+  'padding-left',
+  'padding-right'
+) !default;
+:root {
+  --primary: #2b2a28;
+  --secondary: #feed01;
+  --accent: #fff7e6;
+}
