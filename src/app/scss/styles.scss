@@ -1,25 +1,8 @@
 @import 'utils/variables';
 @import 'utils/mixins';
+@import 'base/reset';
 @import 'base/typography';
-
-* {
-  margin: 0;
-  padding: 0;
-}
 
 body {
   background: var(--primary);
-}
-
-h1 {
-  @include spacing(margin, 6, 2, 2, 3);
-
-  @include breakpoint('xs') {
-    // color: blue;
-  }
-}
-
-.hello {
-  color: red;
-  font-size: 13px;
 }
