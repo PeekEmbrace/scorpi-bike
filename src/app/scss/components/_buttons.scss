@@ -13,34 +13,34 @@
   cursor: pointer;
   border: 2px solid var(--secondary);
   transition: background 0.2s ease-out, color 0.2s ease-out;
-}
 
-.base-button:hover {
-  background: transparent;
-  color: var(--secondary);
-}
+  &:hover {
+    background: transparent;
+    color: var(--secondary);
+  }
 
-.base-button.black-button {
-  background: var(--button-black);
-  color: var(--secondary);
-  border-color: var(--button-black);
-}
+  &.black-button {
+    background: var(--button-black);
+    color: var(--secondary);
+    border-color: var(--button-black);
 
-.base-button.black-button:hover {
-  background: transparent;
-}
+    &:hover {
+      background: transparent;
+    }
+  }
 
-.base-button.white-button {
-  background: var(--button-white);
-  color: var(--primary);
-  border-color: var(--button-white);
-}
+  &.white-button {
+    background: var(--button-white);
+    color: var(--primary);
+    border-color: var(--button-white);
 
-.base-button.white-button:hover {
-  background: transparent;
-  color: var(--button-white);
-}
+    &:hover {
+      background: transparent;
+      color: var(--button-white);
+    }
+  }
 
-.base-button > .icon {
-  @include mr(2);
+  & > .icon {
+    @include mr(2);
+  }
 }
