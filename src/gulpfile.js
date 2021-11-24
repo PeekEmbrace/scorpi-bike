@@ -11,7 +11,7 @@ gulp.task('sass', function (cb) {
   gulp
     .src('app/scss/**/*.scss')
     .pipe(sourcemaps.init())
-    .pipe(sass())
+    .pipe(sass().on('error', sass.logError))
     .pipe(concat('styles.css'))
     .pipe(cssnano())
     .pipe(sourcemaps.write('.'))

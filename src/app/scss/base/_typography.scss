@@ -1,23 +1,5 @@
 @import '../utils/variables';
 
-// Header Font
-@font-face {
-  font-family: 'Norwester';
-  src: url('../../fonts/norwester.otf');
-}
-
-// Subheader Font
-@font-face {
-  font-family: 'Montserrat-SemiBold';
-  src: url('../../fonts/Montserrat-SemiBold.ttf');
-}
-
-// Body Font
-@font-face {
-  font-family: 'Montserrat-Regular';
-  src: url('../../fonts/Montserrat-Regular.ttf');
-}
-
 .yellow-part {
   color: var(--secondary);
 }
@@ -27,19 +9,19 @@ h1 {
   font-family: Norwester;
   font-weight: 500;
   color: var(--accent);
-  @include spacing(margin, 0, 0, 5, 0);
+  @include mb(5);
 }
 
 h2 {
   font-size: 24px;
   font-family: Montserrat-SemiBold;
   color: var(--accent);
-  @include spacing(margin, 0, 0, 4, 0);
+  @include mb(4);
 }
 
 p {
   font-size: 18px;
   font-family: Montserrat-Regular;
   color: var(--accent);
-  @include spacing(margin, 0, 0, 3, 0);
+  @include mb(3);
 }
