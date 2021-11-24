@@ -1,7 +1,14 @@
+// Utils
 @import 'utils/variables';
 @import 'utils/mixins';
+
+// Base
 @import 'base/reset';
+@import 'base/fonts';
 @import 'base/typography';
+
+// Components
+@import 'components/buttons';
 
 body {
   background: var(--primary);
