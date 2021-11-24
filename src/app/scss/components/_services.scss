@@ -1,3 +1,69 @@
-.services {
+@import 'app/scss/utils/variables';
 
+.services {
+  &-title {
+    text-align: center;
+  }
+
+  .underline {
+    &:after {
+      content: '';
+      display: block;
+      height: 1px;
+      background: #fff7e6; //TODO: TO BE CHANGED TO VAR()
+      width: 200px;
+      margin: 4px auto 0;
+
+      @include breakpoint(m) {
+        width: 300px;
+      }
+    }
+  }
+
+  .services-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 1150px;
+    margin: 0 auto;
+
+    .service {
+      text-align: center;
+      max-width: 350px;
+      margin: 0 auto 30px;
+
+      &-icon-wrapper {
+        border: 2px solid var(--secondary);
+        border-radius: 100px;
+        padding: 25px;
+        display: inline-block;
+        margin-bottom: 10px;
+
+        @include breakpoint(m) {
+          padding: 35px;
+        }
+      }
+
+      &-title {
+        font-family: Norwester;
+        font-size: 28px;
+
+        @include breakpoint(m) {
+          font-size: 36px;
+        }
+      }
+
+      &-about {
+        width: 80%;
+        margin: 0 auto;
+      }
+
+      @include breakpoint(s) {
+        max-width: calc(100% / 3);
+      }
+    }
+
+    @include breakpoint(s) {
+      flex-direction: row;
+    }
+  }
 }
