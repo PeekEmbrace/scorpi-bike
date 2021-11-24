@@ -2,6 +2,7 @@
 @import 'utils/mixins';
 @import 'base/reset';
 @import 'base/typography';
+@import 'components/services';
 
 body {
   background: var(--primary);
