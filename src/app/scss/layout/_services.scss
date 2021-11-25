@@ -70,6 +70,7 @@
             border-radius: 10px;
             right: -75px;
             top: 35px;
+            z-index: 9999;
 
             @include breakpoint(s) {
               right: -14px;

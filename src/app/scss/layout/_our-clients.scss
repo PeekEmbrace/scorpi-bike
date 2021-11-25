@@ -1,8 +1,12 @@
 .our-clients {
   position: relative;
   text-align: center;
-  @include pb(8);
-  @include mb(5);
+  @include pb(6);
+
+  @include breakpoint(m) {
+    @include pb(8);
+    @include mb(5);
+  }
 
   &-title {
     text-align: center;
