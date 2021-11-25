@@ -39,7 +39,7 @@
 
     @include breakpoint(m) {
       flex-direction: row;
-      @include p(0, 5);
+      @include p(3, 5);
       max-width: 1075px;
       @include m(0, auto);
     }
