@@ -1,0 +1,131 @@
+.our-clients {
+  position: relative;
+  text-align: center;
+  @include pb(8);
+  @include mb(5);
+
+  &-title {
+    text-align: center;
+  }
+
+  &-background {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -1;
+    max-height: 264px;
+  }
+
+  &-all-button {
+    display: inline-block;
+    @include mt(5);
+
+    &:hover {
+      color: var(--button-black);
+    }
+  }
+
+  .reviews-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include p(3, 0);
+
+    @include breakpoint(m) {
+      flex-direction: row;
+      @include p(0, 5);
+      max-width: 1075px;
+      @include m(0, auto);
+    }
+
+    @include breakpoint(l) {
+      max-width: 1150px;
+    }
+
+    .review {
+      width: 270px;
+      @include p(5, 4);
+      position: relative;
+      text-align: center;
+      border-radius: 15px;
+      box-shadow: 4px 2px 9px 5px rgb(14 14 14 / 50%);
+      @include m(0, auto);
+      background: var(--primary);
+      margin: 0 10px;
+
+      @include breakpoint(xs) {
+        width: 280px;
+      }
+
+      @include breakpoint(l) {
+        width: 300px;
+      }
+
+      @include breakpoint(m) {
+        @include m(0);
+      }
+
+      &::before {
+        content: '';
+        display: block;
+        background: #383838;
+        width: 100%;
+        height: 80px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        border-radius: 15px 15px 0 0;
+      }
+
+      .reviewer-image {
+        border-radius: 100px;
+        position: relative;
+        z-index: 2;
+      }
+
+      .reviewer-name {
+        font-style: italic;
+        font-weight: bold;
+        font-size: 22px;
+        @include mx(3, 2);
+      }
+
+      .reviewer-rating {
+        @include mb(3);
+      }
+
+      .reviewer-comment {
+        font-size: 15px;
+      }
+
+      .base-button {
+        display: inline-block;
+        font-size: 13px;
+      }
+    }
+  }
+
+  .tns-nav {
+    @include mt(3);
+
+    button {
+      width: 20px;
+      height: 20px;
+      border-radius: 100px;
+      outline: 0;
+      border: 0;
+      background: var(--primary);
+
+      &:not(:last-of-type) {
+        @include mr(3);
+      }
+
+      &.tns-nav-active {
+        background: var(--button-white);
+      }
+    }
+  }
+}
