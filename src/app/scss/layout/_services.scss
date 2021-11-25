@@ -10,9 +10,9 @@
       content: '';
       display: block;
       height: 1px;
-      background: #fff7e6; //TODO: TO BE CHANGED TO VAR()
+      background: var(--button-white);
       width: 200px;
-      @include m(2, auto, 0);
+      @include m(3, auto, 0);
 
       @include breakpoint(m) {
         width: 300px;
