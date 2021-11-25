@@ -44,7 +44,7 @@
       }
 
       &-title {
-        font-family: Norwester;
+        font-family: Norwester, sans-serif;
         font-size: 28px;
 
         @include breakpoint(m) {
