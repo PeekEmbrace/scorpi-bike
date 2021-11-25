@@ -5,23 +5,32 @@
 }
 
 h1 {
-  font-size: 48px;
-  font-family: Norwester;
+  font-size: 38px;
+  font-family: Norwester, sans-serif;
   font-weight: 500;
   color: var(--accent);
   @include mb(5);
+  @include breakpoint(m) {
+    font-size: 48px;
+  }
 }
 
 h2 {
-  font-size: 24px;
-  font-family: Montserrat-SemiBold;
+  font-size: 20px;
+  font-family: Montserrat-SemiBold, sans-serif;
   color: var(--accent);
   @include mb(4);
+  @include breakpoint(m) {
+    font-size: 24px;
+  }
 }
 
 p {
-  font-size: 18px;
-  font-family: Montserrat-Regular;
+  font-size: 16px;
+  font-family: Montserrat-Regular, sans-serif;
   color: var(--accent);
   @include mb(3);
+  @include breakpoint(m) {
+    font-size: 18px;
+  }
 }
