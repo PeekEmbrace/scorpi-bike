@@ -1,5 +1,4 @@
 @import 'app/scss/utils/variables';
-
 hr {
   background-color: var(--accent);
   border: 0;
@@ -67,11 +66,6 @@ hr {
 }
 
 @include breakpoint(m) {
-  footer {
-    width: 95%;
-    margin: 0 auto;
-  }
-
   .connect {
     margin: 0;
   }
