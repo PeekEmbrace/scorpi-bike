@@ -35,7 +35,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    @include p(3, 0);
+    @include p(4, 0);
 
     @include breakpoint(m) {
       flex-direction: row;
