@@ -1,8 +1,8 @@
 .container {
-  @include px(5);
+  @include px(6);
   max-width: 1600px;
   margin: 0 auto;
   @include breakpoint(m) {
-    @include px(6);
+    @include px(9);
   }
 }

@@ -1,0 +1,10 @@
+.working-hours {
+  p {
+    font-size: 26px;
+    text-align: center;
+
+    &:first-child {
+      font-weight: bold;
+    }
+  }
+}

@@ -53,55 +53,49 @@ hr {
   }
 }
 
-.copyright-text {
-  text-align: center;
-  font-style: italic;
-}
+footer {
+  .copyright-text {
+    text-align: center;
+    font-style: italic;
+  }
 
-.logo-section,
-.working-hours,
-.social-icons {
-  display: none;
+  .logo-section,
+  .working-hours,
+  .social-icons {
+    display: none;
+  }
 }
 
 @include breakpoint(m) {
   .connect {
     margin: 0;
   }
-
-  .first-part {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .logo-section {
-    display: block;
-  }
-
-  .working-hours {
-    display: flex;
-    align-items: center;
-    width: 50%;
-    justify-content: space-between;
-
-    p {
-      font-size: 26px;
-      text-align: center;
-
-      &:first-child {
-        font-weight: bold;
-      }
+  footer {
+    .first-part {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-  }
 
-  .social-icons {
-    display: block;
-    text-align: center;
-    @include mb(5);
+    .logo-section {
+      display: block;
+    }
 
-    a:not(:last-child) {
-      @include mr(4.5);
+    .working-hours {
+      display: flex;
+      align-items: center;
+      width: 50%;
+      justify-content: space-between;
+    }
+
+    .social-icons {
+      display: block;
+      text-align: center;
+      @include mb(5);
+
+      a:not(:last-child) {
+        @include mr(4.5);
+      }
     }
   }
 }
