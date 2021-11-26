@@ -95,7 +95,7 @@
             & > a {
               display: block;
               @include mt(3);
-              color: var(--primary);
+              color: #fff;
             }
 
             &.is-open {

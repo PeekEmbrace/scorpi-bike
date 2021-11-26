@@ -10,6 +10,7 @@
 
   &-title {
     text-align: center;
+    @include mb(3);
   }
 
   &-background {
@@ -31,23 +32,12 @@
     }
   }
 
-  .reviews-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  .swiper {
+    max-width: 1150px;
     @include p(4, 0);
+  }
 
-    @include breakpoint(m) {
-      flex-direction: row;
-      @include p(3, 5);
-      max-width: 1075px;
-      @include m(0, auto);
-    }
-
-    @include breakpoint(l) {
-      max-width: 1150px;
-    }
-
+  .reviews-wrapper {
     .review {
       width: 270px;
       @include p(5, 4);
@@ -55,7 +45,6 @@
       text-align: center;
       border-radius: 15px;
       box-shadow: 4px 2px 9px 5px var(--onyx-opacity);
-      @include m(0, 3);
       background: var(--primary);
 
       @include breakpoint(xs) {
@@ -64,10 +53,6 @@
 
       @include breakpoint(l) {
         width: 300px;
-      }
-
-      @include breakpoint(m) {
-        @include m(0);
       }
 
       &::before {
@@ -111,10 +96,10 @@
     }
   }
 
-  .tns-nav {
+  .reviews-pagination {
     @include mt(3);
 
-    button {
+    span {
       width: 20px;
       height: 20px;
       border-radius: 100px;
@@ -129,6 +114,11 @@
       &.tns-nav-active {
         background: var(--button-white);
       }
+    }
+
+    span:not(.swiper-pagination-bullet-active) {
+      opacity: 1;
+      background: var(--button-white);
     }
   }
 }
