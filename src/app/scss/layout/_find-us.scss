@@ -85,21 +85,25 @@
 
   &-map-wrapper {
     position: relative;
-    flex-basis: 50%;
+    width: 100%;
 
     @include breakpoint(s) {
       @include mt(0);
+      flex-basis: 50%;
     }
 
     @include breakpoint(m) {
       width: 60%;
     }
 
-    & > img {
+    & > div {
       transform: translateX(-30px);
-      width: 100%;
-      object-fit: cover;
       height: 400px;
+      //width: 400px;
+
+      @include breakpoint(s) {
+        width: auto;
+      }
     }
 
     .yellow-box {
