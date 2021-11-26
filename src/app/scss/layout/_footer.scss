@@ -57,6 +57,7 @@ hr {
 .copyright-text {
   text-align: center;
   font-style: italic;
+  @include mb(6);
 }
 
 .logo-section,
