@@ -1,0 +1,14 @@
+.underline {
+  &:after {
+    content: '';
+    display: block;
+    height: 1px;
+    background: var(--button-white);
+    width: 200px;
+    @include m(3, auto, 0);
+
+    @include breakpoint(m) {
+      width: 300px;
+    }
+  }
+}
