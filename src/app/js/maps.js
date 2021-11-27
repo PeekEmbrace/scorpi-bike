@@ -1,6 +1,5 @@
 // eslint-disable-next-line no-unused-vars
 function initMap() {
-  console.log('hello');
   const myLatLng = { lat: 56.164506617622315, lng: 10.202232602658677 };
   // eslint-disable-next-line no-undef
   const map = new google.maps.Map(document.getElementById('map'), {
@@ -62,5 +61,14 @@ function initMap() {
       scaledSize: new google.maps.Size(50, 50), // scaled size
       url: 'images/icons/map-pin.svg',
     },
+  });
+
+  // eslint-disable-next-line no-undef
+  const service = new google.maps.places.PlacesService(map);
+  service.getDetails({
+    placeId: 'ChIJKflki78_TEYRUFf_TWF3nNM',
+  }, function(place) {
+    // eslint-disable-next-line no-undef
+    setReviews(place.reviews);
   });
 }
