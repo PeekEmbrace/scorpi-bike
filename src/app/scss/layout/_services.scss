@@ -96,6 +96,7 @@
               display: block;
               @include mt(3);
               color: #fff;
+              text-decoration: underline;
             }
 
             &.is-open {
