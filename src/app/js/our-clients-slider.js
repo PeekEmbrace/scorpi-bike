@@ -10,9 +10,9 @@ function initSwiper() {
       el: '.reviews-pagination',
       clickable: true,
     },
-    // autoplay: {
-    //   delay: 5000,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
   });
 }
