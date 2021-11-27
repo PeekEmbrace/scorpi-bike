@@ -2,12 +2,9 @@ header.main-header {
   display: flex;
   justify-content: center;
 
+
   .mesh-image {
-    width: 100vw;
-    height: 76vh;
-    top: -85px;
-    position: absolute;
-    z-index: -1;
+    display: none;
   }
 
   .bike-img {
@@ -27,14 +24,19 @@ header.main-header {
   }
   .main-heading {
     font-size: 48px;
+    text-align: center;
   }
   .working-hours {
+    width: 90%;
     .desktop {
       display: none;
     }
-    width: 100%;
     article {
       max-width: 150px;
+
+      p {
+        font-size: 21px;
+      }
     }
     .first-row {
       display: flex;
@@ -42,7 +44,7 @@ header.main-header {
       width: 100%;
       margin: -16px;
       & > * {
-        @include m(4);
+        @include my(7);
       }
     }
     .second-row {
@@ -54,12 +56,20 @@ header.main-header {
   }
   .sub {
     font-family: Montserrat-SemiBold;
+    text-align: center;
     @include mb(6);
   }
   .action-buttons {
     display: flex;
     width: 100%;
     margin: -9px;
+
+    .white-button {
+      svg {
+        min-width: 26px;
+      }
+    }
+
     & > * {
       width: 50%;
       display: flex;
@@ -73,16 +83,54 @@ header.main-header {
   }
   @include breakpoint(m) {
     position: relative;
+
+    .mesh-image {
+      display: block;
+      width: 100vw;
+      height: 76vh;
+      top: -85px;
+      position: absolute;
+      z-index: -1;
+    }
+
+    .working-hours {
+      width: 100%;
+      article {
+        p {
+          font-size: 26px;
+        }
+      }
+    }
+
     .bike-img {
       display: block;
-      width: 737px;
-      height: 469px;
+      width: 600px;
+      height: 382px;
+      margin: auto;
       @include mr(7);
+
+      @include breakpoint(l) {
+        width: 737px;
+        height: 469px;
+      }
     }
     .header-info {
       @include ml(7);
       width: 40%;
+
+      & > * {
+        @include my(0);
+      }
     }
+    
+    .mesh-graphic {
+      position: absolute;
+      z-index: -1;
+      top: -46%;
+    }
+  }
+
+  @include breakpoint(working-hours) {
     .working-hours {
       .desktop {
         display: block;
@@ -90,12 +138,6 @@ header.main-header {
       .second-row {
         display: none;
       }
-      width: 90%;
-    }
-    .mesh-graphic {
-      position: absolute;
-      z-index: -1;
-      top: -46%;
     }
   }
 }
