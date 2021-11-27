@@ -22,12 +22,6 @@ function getStars(rating) {
   return starBuilder;
 }
 
-function truncateReviewText(text) {
-  const subLength = 272;
-  const subString = text.substr(0, subLength);
-  return subString.length < text.length ? subString + '...' : subString;
-}
-
 // eslint-disable-next-line no-unused-vars
 function setReviews(reviews) {
   for (let review of reviews) {
@@ -45,7 +39,7 @@ function setReviews(reviews) {
             <section class='reviewer-rating'>
                ${getStars(review.rating)}
             </section>
-            <p class='reviewer-comment'>"${truncateReviewText(review.text)}"</p>
+            <p class='reviewer-comment'>"${review.text}"</p>
             <a href='${reviewUrl}' class='base-button' target='_blank' rel='noopener'>Read On Google</a>
           </article>
       `;
