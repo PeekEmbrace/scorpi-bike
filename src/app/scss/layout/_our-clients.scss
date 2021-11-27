@@ -46,9 +46,16 @@
       border-radius: 15px;
       box-shadow: 4px 2px 9px 5px var(--onyx-opacity);
       background: var(--primary);
+      height: 355px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
 
       @include breakpoint(xs) {
         width: 280px;
+        height: 335px;
       }
 
       @include breakpoint(l) {
@@ -78,7 +85,7 @@
         font-style: italic;
         font-weight: bold;
         font-size: 22px;
-        @include mx(3, 2);
+        @include my(2, 2);
       }
 
       .reviewer-rating {
@@ -87,11 +94,16 @@
 
       .reviewer-comment {
         font-size: 15px;
+        display: -webkit-box;
+        -webkit-line-clamp: 8;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
       }
 
       .base-button {
         display: inline-block;
         font-size: 13px;
+        margin-top: auto;
       }
     }
   }
