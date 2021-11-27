@@ -1,6 +1,15 @@
 header.main-header {
   display: flex;
   justify-content: center;
+
+  .mesh-image {
+    width: 100vw;
+    height: 76vh;
+    top: -85px;
+    position: absolute;
+    z-index: -1;
+  }
+
   .bike-img {
     display: none;
   }
