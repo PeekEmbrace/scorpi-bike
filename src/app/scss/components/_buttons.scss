@@ -5,7 +5,7 @@
   outline: 0;
   text-transform: capitalize;
   color: rgba(var(--primary), 0.8);
-  font-family: Montserrat-SemiBold;
+  font-family: Montserrat-SemiBold, sans-serif;
   @include p(4, 5);
   border-radius: 15px;
   text-decoration: none;
@@ -15,10 +15,23 @@
   transition: background 0.2s ease-out, color 0.2s ease-out;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
 
   &:hover {
     background: transparent;
     color: var(--secondary);
+
+    .icon {
+      color: var(--secondary);
+
+      & > svg {
+        fill: var(--secondary);
+
+        path {
+          fill: var(--secondary);
+        }
+      }
+    }
   }
 
   &.black-button {
@@ -27,7 +40,7 @@
     border-color: var(--button-black);
 
     &:hover {
-      background: transparent;
+      background: var(--primary);
     }
   }
 
@@ -37,12 +50,16 @@
     border-color: var(--button-white);
 
     &:hover {
-      background: transparent;
+      background: var(--primary);
       color: var(--button-white);
     }
   }
 
   & > .icon {
     @include mr(2);
+
+    svg, path {
+      transition: fill 0.2s ease-out;
+    }
   }
 }
