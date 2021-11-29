@@ -1,7 +1,6 @@
 .find-us {
   position: relative;
   @include pt(8);
-  max-width: 1150px;
   margin: 0 auto;
   @include m(0, 'auto', 9);
   display: flex;
@@ -99,7 +98,6 @@
     & > div {
       transform: translateX(-30px);
       height: 400px;
-      //width: 400px;
 
       @include breakpoint(s) {
         width: auto;

@@ -24,7 +24,7 @@ header.main-header {
       display: block;
       width: 600px;
       height: 382px;
-      margin: auto 0;
+      margin: auto auto auto 0;
 
       @include breakpoint(l) {
         width: 737px;
@@ -46,7 +46,7 @@ header.main-header {
     }
 
     @include breakpoint(m) {
-      @include ml(3);
+      @include ml('auto');
 
       @include breakpoint(l) {
         @include ml(3);
@@ -129,19 +129,21 @@ header.main-header {
   .action-buttons {
     display: flex;
     width: 100%;
-    margin-top: -9px;
-    margin-bottom: -9px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: -9px;
+    margin-bottom: -9px;
 
     @include breakpoint(m) {
       flex-direction: row;
     }
 
+    @include breakpoint(l) {
+      margin: 0;
+    }
+
     & > * {
-      //width: 50%;
-      //max-width: 49%;
       min-width: 120px;
       max-width: 165px;
 
@@ -152,11 +154,6 @@ header.main-header {
           @include mr(2);
         }
       }
-
-      //
-      //&:last-of-type {
-      //  @include ml(2);
-      //}
 
       svg {
         min-width: 24px;

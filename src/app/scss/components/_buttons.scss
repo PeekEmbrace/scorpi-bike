@@ -20,6 +20,18 @@
   &:hover {
     background: transparent;
     color: var(--secondary);
+
+    .icon {
+      color: var(--secondary);
+
+      & > svg {
+        fill: var(--secondary);
+
+        path {
+          fill: var(--secondary);
+        }
+      }
+    }
   }
 
   &.black-button {
@@ -28,7 +40,7 @@
     border-color: var(--button-black);
 
     &:hover {
-      background: transparent;
+      background: var(--primary);
     }
   }
 
@@ -38,12 +50,16 @@
     border-color: var(--button-white);
 
     &:hover {
-      background: transparent;
+      background: var(--primary);
       color: var(--button-white);
     }
   }
 
   & > .icon {
     @include mr(2);
+
+    svg, path {
+      transition: fill 0.2s ease-out;
+    }
   }
 }
