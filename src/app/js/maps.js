@@ -73,8 +73,13 @@ function initMap() {
     service.getDetails({
       placeId: 'ChIJKflki78_TEYRUFf_TWF3nNM',
     }, function(place) {
-      // eslint-disable-next-line no-undef
-      setReviews(place.reviews);
+      if (place && place.reviews) {
+        // eslint-disable-next-line no-undef
+        setReviews(place.reviews);
+      } else {
+        // eslint-disable-next-line no-undef
+        deleteOurClientsSection();
+      }
     });
   };
 })();
