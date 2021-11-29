@@ -23,6 +23,12 @@ function getStars(rating) {
 }
 
 // eslint-disable-next-line no-unused-vars
+function deleteOurClientsSection() {
+  const ourClientsSection = document.querySelector('.our-clients');
+  ourClientsSection.remove();
+}
+
+// eslint-disable-next-line no-unused-vars
 function setReviews(reviews) {
   for (let review of reviews) {
     const reviewUrl = getAuthorAccount(review.author_url) + `/place/${placeId}`;
