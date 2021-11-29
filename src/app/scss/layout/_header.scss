@@ -1,15 +1,38 @@
 header.main-header {
+  position: relative;
   display: flex;
   justify-content: center;
   @include mt(4);
 
   .mesh-image {
     display: none;
+
+    @include breakpoint(m) {
+      display: block;
+      width: 120vw;
+      height: 140%;
+      top: -85px;
+      position: absolute;
+      z-index: -1;
+    }
   }
 
   .bike-img {
     display: none;
+
+    @include breakpoint(m) {
+      display: block;
+      width: 600px;
+      height: 382px;
+      margin: auto 0;
+
+      @include breakpoint(l) {
+        width: 737px;
+        height: 469px;
+      }
+    }
   }
+
   .header-info {
     display: flex;
     flex-direction: column;
@@ -21,17 +44,37 @@ header.main-header {
     & > * {
       @include my(4);
     }
+
+    @include breakpoint(m) {
+      @include ml(3);
+
+      @include breakpoint(l) {
+        @include ml(3);
+        width: 40%;
+
+        & > * {
+          @include my(2);
+        }
+      }
+    }
   }
+
   .main-heading {
     font-size: 48px;
     text-align: center;
-    @include mb(3)
+    @include mb(3);
   }
+
   .working-hours {
     width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     .desktop {
       display: none;
     }
+
     article {
       max-width: 150px;
 
@@ -39,79 +82,26 @@ header.main-header {
         font-size: 21px;
       }
     }
+
     .first-row {
       display: flex;
       justify-content: space-between;
       width: 100%;
-      margin: -16px;
+      margin-top: -16px;
+      margin-bottom: -16px;
+
       & > * {
         @include my(7);
       }
     }
+
     .second-row {
       width: 50%;
     }
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .sub {
-    font-family: Montserrat-SemiBold;
-    text-align: center;
-    @include mb(6);
-  }
-  .action-buttons {
-    display: flex;
-    width: 100%;
-    margin: -9px;
 
-    .white-button {
-      svg {
-        min-width: 26px;
-      }
-    }
-
-    & > * {
-      width: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      @include m(3);
-      svg {
-        @include mr(3);
-      }
-    }
-  }
-
-  @include breakpoint(l) {
-    .header-info {
-      @include ml(7);
-      width: 40%;
-
-      & > * {
-        @include my(2);
-      }
-    }
-  }
-
-  @include breakpoint(m) {
-    position: relative;
-
-    .mesh-image {
-      display: block;
-      width: 100vw;
-      height: 76vh;
-      top: -85px;
-      position: absolute;
-      z-index: -1;
-    }
-
-    header.main-header {
-      @include mt(6);
-    }
-
-    .working-hours {
+    @include breakpoint(m) {
       width: 100%;
+
       article {
         p {
           font-size: 26px;
@@ -119,38 +109,63 @@ header.main-header {
       }
     }
 
-    .bike-img {
-      display: block;
-      width: 600px;
-      height: 382px;
-      margin: auto 0;
-      @include mr(7);
-
-      @include breakpoint(l) {
-        width: 737px;
-        height: 469px;
-      }
-    }
-
-    .header-info {
-      @include ml(07);
-    }
-    
-    .mesh-graphic {
-      position: absolute;
-      z-index: -1;
-      top: -46%;
-    }
-  }
-
-  @include breakpoint(working-hours) {
-    .working-hours {
+    @include breakpoint(working-hours) {
       .desktop {
         display: block;
       }
+
       .second-row {
         display: none;
       }
     }
+  }
+
+  .sub {
+    font-family: Montserrat-SemiBold, sans-serif;
+    text-align: center;
+    @include mb(3);
+  }
+
+  .action-buttons {
+    display: flex;
+    width: 100%;
+    margin-top: -9px;
+    margin-bottom: -9px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    @include breakpoint(m) {
+      flex-direction: row;
+    }
+
+    & > * {
+      //width: 50%;
+      //max-width: 49%;
+      min-width: 120px;
+      max-width: 165px;
+
+      &:first-of-type {
+        @include mb(2);
+        @include breakpoint(m) {
+          @include mb(0);
+          @include mr(2);
+        }
+      }
+
+      //
+      //&:last-of-type {
+      //  @include ml(2);
+      //}
+
+      svg {
+        min-width: 24px;
+        min-height: 24px;
+      }
+    }
+  }
+
+  @include breakpoint(m) {
+    @include mt(6);
   }
 }
