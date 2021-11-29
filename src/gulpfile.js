@@ -1,11 +1,11 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const browserSync = require('browser-sync').create();
-const cssnano = require('gulp-cssnano');
 const sourcemaps = require('gulp-sourcemaps');
 const concat = require('gulp-concat');
 const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
+const cleanCSS = require('gulp-clean-css');
 
 gulp.task('sass', function (cb) {
   gulp
@@ -13,7 +13,7 @@ gulp.task('sass', function (cb) {
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(concat('styles.css'))
-    .pipe(cssnano())
+    .pipe(cleanCSS())
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('app/css'))
     .pipe(browserSync.stream());

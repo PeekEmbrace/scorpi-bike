@@ -1,4 +1,5 @@
 @import 'app/scss/utils/variables';
+
 hr {
   background-color: var(--accent);
   border: 0;
@@ -53,18 +54,18 @@ hr {
   }
 }
 
-footer {
-  .copyright-text {
-    text-align: center;
-    font-style: italic;
-  }
-
-  .logo-section,
-  .working-hours,
-  .social-icons {
-    display: none;
-  }
+.copyright-text {
+  text-align: center;
+  font-style: italic;
+  @include mb(6);
 }
+
+.logo-section,
+.working-hours,
+.social-icons {
+  display: none;
+}
+
 
 @include breakpoint(m) {
   .connect {

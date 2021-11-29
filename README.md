@@ -28,3 +28,9 @@ npm install --global gulp-cli
 
 ## SCSS Structure
 SCSS Structure that we can follow: https://gist.github.com/AdamMarsden/7b85e8d5bdb5bef969a0
+
+
+
+## Variables
+
+Google API Key: `AIzaSyDXI8CD2Vs0Ri13-l-tCfW6DRhFH6nweHM`

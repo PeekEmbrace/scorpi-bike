@@ -82,6 +82,18 @@ header.main-header {
       }
     }
   }
+
+  @include breakpoint(l) {
+    .header-info {
+      @include ml(7);
+      width: 40%;
+
+      & > * {
+        @include my(2);
+      }
+    }
+  }
+
   @include breakpoint(m) {
     position: relative;
 
@@ -111,7 +123,7 @@ header.main-header {
       display: block;
       width: 600px;
       height: 382px;
-      margin: auto;
+      margin: auto 0;
       @include mr(7);
 
       @include breakpoint(l) {
@@ -119,13 +131,9 @@ header.main-header {
         height: 469px;
       }
     }
-    .header-info {
-      @include ml(7);
-      width: 40%;
 
-      & > * {
-        @include my(2);
-      }
+    .header-info {
+      @include ml(07);
     }
     
     .mesh-graphic {
