@@ -22,13 +22,66 @@ header.main-header {
 
     @include breakpoint(m) {
       display: block;
-      width: 600px;
+      width: 605px;
+      min-width: 605px;
+      max-height: 605px;
       height: 382px;
       margin: auto auto auto 0;
 
       @include breakpoint(l) {
         width: 737px;
+        min-width: 737px;
+        max-width: 737px;
         height: 469px;
+      }
+    }
+
+    &.bike-wrapper {
+      position: relative;
+      left: -100%;
+      animation: moveBike 1.2s ease-out 1s forwards;
+
+      .bike-frame {
+        width: 70%;
+        object-fit: contain;
+        margin: 0 auto;
+        display: block;
+
+        @include breakpoint(l) {
+          width: 100%;
+        }
+      }
+
+      .front-wheel,
+      .back-wheel {
+        position: absolute;
+        z-index: -1;
+        transform-origin: center center;
+        animation: rotateWheel 1.2s ease-out 1s forwards;
+      }
+
+      .back-wheel {
+        bottom: -56px;
+        left: -13px;
+        width: 43%;
+        height: auto;
+
+        @include breakpoint(l) {
+          bottom: -40px;
+          left: -20px;
+        }
+      }
+
+      .front-wheel {
+        right: -28px;
+        bottom: -54px;
+        width: 43%;
+        height: auto;
+
+        @include breakpoint(l) {
+          right: -48px;
+          bottom: -38px;
+        }
       }
     }
   }
@@ -164,5 +217,25 @@ header.main-header {
 
   @include breakpoint(m) {
     @include mt(6);
+  }
+}
+
+@keyframes moveBike {
+  from {
+    left: -1000px;
+  }
+
+  to {
+    left: 0;
+  }
+}
+
+@keyframes rotateWheel {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
   }
 }

@@ -1,5 +1,6 @@
 const placeId = 'ChIJKflki78_TEYRUFf_TWF3nNM';
 const reviewsWrapper = document.querySelector('.reviews-wrapper');
+const ourClientsSection = document.querySelector('.our-clients');
 
 function getAuthorAccount(url) {
   return url.split('/').slice(0, -1).join('/');
@@ -24,7 +25,6 @@ function getStars(rating) {
 
 // eslint-disable-next-line no-unused-vars
 function deleteOurClientsSection() {
-  const ourClientsSection = document.querySelector('.our-clients');
   ourClientsSection.remove();
 }
 
@@ -53,6 +53,7 @@ function setReviews(reviews) {
     reviewsWrapper.insertAdjacentHTML('beforeend', reviewElement);
   }
 
+  ourClientsSection.classList.add('has-reviews');
   // eslint-disable-next-line no-undef
   initSwiper();
 }
