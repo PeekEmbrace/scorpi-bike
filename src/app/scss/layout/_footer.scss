@@ -54,10 +54,16 @@ hr {
   }
 }
 
-.copyright-text {
+.copyright-text,
+.madeby-text {
   text-align: center;
   font-style: italic;
+  @include mb(3);
+}
+
+.madeby-text {
   @include mb(6);
+  font-size: 16px;
 }
 
 .logo-section,
@@ -65,7 +71,6 @@ hr {
 .social-icons {
   display: none;
 }
-
 
 @include breakpoint(m) {
   .connect {
