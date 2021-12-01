@@ -1,3 +1,4 @@
 const copyrightYear = document.getElementById('copyright-year');
+const currentYear = new Date().getFullYear();
 
-copyrightYear.innerText = new Date().getFullYear().toString();
+copyrightYear.innerText = currentYear > 2021 ? `-${currentYear}` : '';
