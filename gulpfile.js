@@ -9,20 +9,20 @@ const cleanCSS = require('gulp-clean-css');
 
 gulp.task('sass', function (cb) {
   gulp
-    .src('app/scss/**/*.scss')
+    .src('scss/**/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(concat('styles.css'))
     .pipe(cleanCSS())
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('app/css'))
+    .pipe(gulp.dest('css'))
     .pipe(browserSync.stream());
   cb();
 });
 
 gulp.task('js', function (cb) {
   gulp
-    .src('app/js/**/*.js')
+    .src('js/**/*.js')
     .pipe(sourcemaps.init())
     .pipe(
       babel({
@@ -32,7 +32,7 @@ gulp.task('js', function (cb) {
     .pipe(concat('all.js'))
     .pipe(uglify())
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('app/scripts'))
+    .pipe(gulp.dest('scripts'))
     .pipe(browserSync.stream());
   cb();
 });
@@ -40,16 +40,16 @@ gulp.task('js', function (cb) {
 gulp.task('browserSync', function (done) {
   browserSync.init({
     server: {
-      baseDir: 'app',
+      baseDir: './',
     },
   });
   done();
 });
 
 gulp.task('watch-files', function () {
-  gulp.watch('app/scss/**/*.scss', gulp.series('sass'));
-  gulp.watch('app/*.html').on('change', browserSync.reload);
-  gulp.watch('app/js/**/*.js', gulp.series('js'));
+  gulp.watch('scss/**/*.scss', gulp.series('sass'));
+  gulp.watch('*.html').on('change', browserSync.reload);
+  gulp.watch('js/**/*.js', gulp.series('js'));
 });
 
 gulp.task('watch', gulp.series('browserSync', 'sass', 'js', 'watch-files'));
