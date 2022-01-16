@@ -73,7 +73,6 @@
         } else if (cookieConsent === 'deny') {
           disableAnalytics();
         }
-
         // Initialise cookie consent banner
         window.cookieconsent.initialise({
           palette: {
@@ -92,6 +91,12 @@
             dismiss: 'Approve',
             deny: 'Reject',
             href: '/policy.html',
+          },
+          onPopupOpen: function () {
+            document.body.classList.add('cookie-isopen');
+          },
+          onPopupClose: function () {
+            document.body.classList.remove('cookie-isopen');
           },
           // Reload the page on user choice to make sure cookie is set
           onStatusChange: function (status, chosenBefore) {
@@ -469,7 +474,7 @@
 
       <section class="bike-wrapper bike-img">
         <img
-          src="/images/back-tire.png"
+          src="/images/bike-back-tire.png"
           alt="Bike back wheel"
           class="back-wheel"
           width="329"
@@ -483,7 +488,7 @@
           height="424"
         />
         <img
-          src="/images/front-tire.png"
+          src="/images/bike-front-tire.png"
           alt="Bike front wheel"
           class="front-wheel"
           width="329"
@@ -607,7 +612,13 @@
           <h1 class="find-us-title mobile">Find Us</h1>
           <h2 class="find-us-subtitle">
             You can visit on
-            <span class="location">Fynsgade 6 8000 Aarhus</span>
+            <a
+              href="https://g.page/ScorpioBike01?share"
+              class="location"
+              target="_blank"
+              rel="noopener"
+              >Fynsgade 6 8000 Aarhus</a
+            >
           </h2>
           <a
             class="base-button"
@@ -832,7 +843,7 @@
 
         <img
           class="our-clients-background"
-          src="/images/heels.png"
+          src="/images/yellow-heels-illustration.png"
           alt="Heels illustration with yellow color pallet"
           width="1276"
           height="264"

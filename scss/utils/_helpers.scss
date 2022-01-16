@@ -1,7 +1,7 @@
 .container {
   @include px(3);
   max-width: 1600px;
-  margin: 0 auto;
+  @include m(0, 'auto', 5);
   @include breakpoint(m) {
     @include px(6);
   }
