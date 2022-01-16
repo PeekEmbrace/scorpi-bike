@@ -49,7 +49,7 @@ function initMap() {
     });
 
     // eslint-disable-next-line no-undef
-    new google.maps.Marker({
+    const marker = new google.maps.Marker({
       position: myLatLng,
       map,
       title: 'Scorpio Cykelværksted',
@@ -66,6 +66,12 @@ function initMap() {
         scaledSize: new google.maps.Size(50, 50), // scaled size
         url: 'images/icons/map-pin.svg',
       },
+      url: 'https://g.page/ScorpioBike01?share'
+    });
+
+    // eslint-disable-next-line no-undef
+    google.maps.event.addListener(marker, 'click', function() {
+      window.open(this.url, '_blank');
     });
 
     // eslint-disable-next-line no-undef

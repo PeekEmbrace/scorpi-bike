@@ -22,9 +22,9 @@ header.main-header {
 
     @include breakpoint(m) {
       display: block;
-      width: 605px;
-      min-width: 605px;
-      max-height: 605px;
+      width: 580px;
+      min-width: 580px;
+      max-height: 580px;
       height: 382px;
       margin: auto auto auto 0;
 
@@ -153,7 +153,7 @@ header.main-header {
     }
 
     @include breakpoint(m) {
-      width: 100%;
+      width: 83%;
 
       article {
         p {
@@ -183,11 +183,12 @@ header.main-header {
   .action-buttons {
     display: flex;
     width: 100%;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-direction: column;
     margin-top: -9px;
     margin-bottom: -9px;
+    max-width: 405px;
 
     @include breakpoint(m) {
       flex-direction: row;
@@ -202,7 +203,7 @@ header.main-header {
       max-width: 165px;
 
       &:first-of-type {
-        @include mb(2);
+        @include mb(4);
         @include breakpoint(m) {
           @include mb(0);
           @include mr(2);

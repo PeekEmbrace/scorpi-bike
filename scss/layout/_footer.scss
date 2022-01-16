@@ -66,6 +66,21 @@ hr {
   font-size: 16px;
 }
 
+.cookie-isopen {
+  .madeby-text {
+    @include mb(14);
+    @include breakpoint(xs) {
+      @include mb(12);
+    }
+    @include breakpoint(s) {
+      @include mb(10);
+    }
+    @include breakpoint(m) {
+      @include mb(9);
+    }
+  }
+}
+
 .logo-section,
 .working-hours,
 .social-icons {
