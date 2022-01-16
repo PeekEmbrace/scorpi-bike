@@ -1,7 +1,6 @@
 const placeId = 'ChIJKflki78_TEYRUFf_TWF3nNM';
 const reviewsWrapper = document.querySelector('.reviews-wrapper');
 const ourClientsSection = document.querySelector('.our-clients');
-const reviewsSchema = [];
 
 function getAuthorAccount(url) {
   return url.split('/').slice(0, -1).join('/');
@@ -51,25 +50,8 @@ function setReviews(reviews) {
           </article>
       `;
 
-    reviewsSchema.push({
-      '@type': 'Review',
-      'reviewBody': review.text,
-      'author': {
-        '@type': 'Person',
-        'name': review.author_name
-      },
-      'reviewRating': {
-        '@type': 'Rating',
-        'ratingValue': review.rating
-      }
-    }
-    );
-
     reviewsWrapper.insertAdjacentHTML('beforeend', reviewElement);
   }
-
-  // eslint-disable-next-line no-undef
-  createSchema(reviewsSchema);
 
   ourClientsSection.classList.add('has-reviews');
   // eslint-disable-next-line no-undef
