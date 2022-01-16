@@ -81,6 +81,7 @@ function initMap() {
     }, function(place) {
       if (place && place.reviews) {
         // eslint-disable-next-line no-undef
+
         setReviews(place.reviews);
       } else {
         // eslint-disable-next-line no-undef
