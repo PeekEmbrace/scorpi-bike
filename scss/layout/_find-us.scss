@@ -2,7 +2,7 @@
   position: relative;
   @include pt(8);
   margin: 0 auto;
-  @include m(0, 'auto', 9);
+  @include m(0, 'auto', 10);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,7 +16,7 @@
 
   @include breakpoint(m) {
     flex-wrap: nowrap;
-    @include mb(10);
+    @include mb(11);
   }
 
   &-mesh {
