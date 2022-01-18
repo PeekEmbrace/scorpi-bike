@@ -10,7 +10,7 @@
   });
 
   languages.forEach((language) => {
-    const elementLang = language.getAttribute('data-lang')
+    const elementLang = language.getAttribute('data-lang');
     if(pageLanguage.includes(elementLang)) {
       language.classList.add('active');
       currentLanguage.innerText = elementLang.toUpperCase();
