@@ -53,3 +53,10 @@ gulp.task('watch-files', function () {
 });
 
 gulp.task('watch', gulp.series('browserSync', 'sass', 'js', 'watch-files'));
+gulp.task('build', function (cb) {
+  gulp
+    .src(['css', 'en', 'scripts', 'images', 'fonts', '*.html'])
+    .pipe(gulp.dest('build'));
+
+  cb();
+});
