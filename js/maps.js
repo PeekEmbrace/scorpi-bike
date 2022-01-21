@@ -64,7 +64,7 @@ function initMap() {
         labelOrigin: new google.maps.Point(20, 60),
         // eslint-disable-next-line no-undef
         scaledSize: new google.maps.Size(50, 50), // scaled size
-        url: 'images/icons/map-pin.svg',
+        url: '/images/icons/map-pin.svg',
       },
       url: 'https://g.page/ScorpioBike01?share'
     });

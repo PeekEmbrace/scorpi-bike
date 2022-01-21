@@ -12,7 +12,7 @@ function getStars(rating) {
   for (let i = 0; i < rating; i++) {
     starBuilder += `
       <img
-        src='images/star.png'
+        src='/images/star.png'
         alt='Star icon used for the rating'
         width='15'
         height='14'

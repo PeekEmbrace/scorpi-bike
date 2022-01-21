@@ -64,6 +64,11 @@ hr {
 .madeby-text {
   @include mb(6);
   font-size: 16px;
+
+  a {
+    color: var(--button-white);
+    text-decoration: underline;
+  }
 }
 
 .cookie-isopen {
