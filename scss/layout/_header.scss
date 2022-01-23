@@ -116,6 +116,14 @@ header.main-header {
     font-size: 48px;
     text-align: center;
     @include mb(3);
+
+    &.danish {
+      font-family: Fairview-Regular;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 59px;
+      font-weight: bolder;
+    }
   }
 
   .working-hours {
@@ -157,7 +165,7 @@ header.main-header {
 
       article {
         p {
-          font-size: 26px;
+          font-size: 25px;
         }
       }
     }
