@@ -30,11 +30,11 @@
 
   .languages {
     opacity: 0;
-    background: var(--secondary);
+    background: #46433e;
     position: absolute;
     top: 45px;
     left: 10px;
-    border-radius: 5px;
+    border-radius: 7px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -49,6 +49,10 @@
       margin-left: -5px;
       border-width: 5px;
       border-style: solid;
+      border-color: transparent transparent #46433e transparent;
+    }
+
+    &.upper-active::after {
       border-color: transparent transparent var(--secondary) transparent;
     }
 
@@ -57,10 +61,10 @@
       font-family: 'Montserrat-SemiBold', sans-serif;
 
       &.active {
-        background: #46433e;
+        background: var(--secondary);
 
         a {
-          color: var(--secondary);
+          color: #46433e;
         }
       }
 
@@ -73,7 +77,7 @@
       }
 
       a {
-        color: var(--primary);
+        color: var(--secondary);
       }
     }
   }
